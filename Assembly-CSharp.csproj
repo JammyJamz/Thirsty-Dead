@@ -89,6 +89,7 @@
     <Compile Include="Assets\RestaurantKit\Scripts\UI\BackButton.cs" />
     <Compile Include="Assets\RestaurantKit\Scripts\UI\MenuController.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\ItemPickup.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>F:/TechPrototype/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
