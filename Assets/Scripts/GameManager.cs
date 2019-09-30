@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public Text uiText;
     public float availableTime;
 
+    public Camera fpsCam;
+    public Camera overheadCam;
+
     private float seconds;
     private float minutes;
     private float gameTime;
@@ -26,5 +29,28 @@ public class GameManager : MonoBehaviour
         remainingTime = string.Format("{0:00} : {1:00}", minutes, seconds);
        
         uiText.text = remainingTime;
+
+        if (Input.GetKeyDown(KeyCode.Keypad1))
+        {
+           // print("correct number");
+            ShowOverheadView();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Keypad2))
+        {
+            ShowFPSView();
+        }
+    }
+
+    public void ShowOverheadView()
+    {
+        fpsCam.enabled = false;
+        overheadCam.enabled = true;
+    }
+
+    public void ShowFPSView()
+    {
+        fpsCam.enabled = true;
+        overheadCam.enabled = false;
     }
 }

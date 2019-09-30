@@ -18,20 +18,8 @@ public class ItemPickup : MonoBehaviour
     private void OnMouseUp()
     {
         this.transform.parent = null;
-    //    GetComponent<Rigidbody>().freezeRotation = false;
+        GetComponent<Rigidbody>().freezeRotation = false;
         GetComponent<Rigidbody>().useGravity = true;
         GetComponent<BoxCollider>().enabled = true;
     }
-
-    private void Update()
-    {
-       
-    }
-
-
-
-
-
-
-
 }
