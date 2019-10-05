@@ -21,6 +21,12 @@ public class GameManager : MonoBehaviour
     private bool canCount = true;
     private bool doOnce = false;
 
+    private void Start()
+    {
+
+        ShowFPSView();
+    }
+
     private void Update()
     {   
         gameTime = (int)(availableTime - Time.timeSinceLevelLoad);
@@ -30,16 +36,24 @@ public class GameManager : MonoBehaviour
        
         uiText.text = remainingTime;
 
+
         if (Input.GetKeyDown(KeyCode.Keypad1))
+        {
+            ShowFPSView();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Keypad2))
         {
            // print("correct number");
             ShowOverheadView();
         }
 
-        if (Input.GetKeyDown(KeyCode.Keypad2))
-        {
-            ShowFPSView();
-        }
+
+    }
+    public void ShowFPSView()
+    {
+        fpsCam.enabled = true;
+        overheadCam.enabled = false;
     }
 
     public void ShowOverheadView()
@@ -48,9 +62,5 @@ public class GameManager : MonoBehaviour
         overheadCam.enabled = true;
     }
 
-    public void ShowFPSView()
-    {
-        fpsCam.enabled = true;
-        overheadCam.enabled = false;
-    }
+
 }

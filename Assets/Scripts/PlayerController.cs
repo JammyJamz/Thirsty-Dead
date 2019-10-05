@@ -31,6 +31,14 @@ public class PlayerController : MonoBehaviour
 
         slider.maxValue = maxStamina;
         slider.value = maxStamina;
+
+       // Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void Update()
+    {
+       // if (Input.GetKeyDown("escape"))
+         //   Cursor.lockState = CursorLockMode.None;
     }
 
     private void FixedUpdate()
@@ -42,13 +50,14 @@ public class PlayerController : MonoBehaviour
         else
             isMoving = false;
 
-        haxis = Input.GetAxis("Horizontal");
-        vaxis = Input.GetAxis("Vertical");
+        haxis = Input.GetAxis("Horizontal")* speed * Time.deltaTime;
+        vaxis = Input.GetAxis("Vertical")* speed * Time.deltaTime;
+        transform.Translate(haxis, 0, vaxis);
         
 
-        Vector3 move = new Vector3(haxis, 0, vaxis) * speed * Time.deltaTime;
-        rb.MovePosition(transform.position + move);
-        Vector3 run;
+        //Vector3 move = new Vector3(haxis, 0, vaxis) * speed * Time.deltaTime;
+       // rb.MovePosition(transform.position + move);
+        //Vector3 run;
 
         isRunning = Input.GetKey(KeyCode.LeftShift);
         if (isRunning && isMoving)
@@ -59,8 +68,12 @@ public class PlayerController : MonoBehaviour
                 slider.value = 0;
             }
 
-            run = new Vector3(haxis, 0, vaxis) * runSpeed * Time.deltaTime;
-            rb.MovePosition(transform.position + run);
+            //run = new Vector3(haxis, 0, vaxis) * runSpeed * Time.deltaTime;
+            //rb.MovePosition(transform.position + run);
+
+            haxis = Input.GetAxis("Horizontal") * runSpeed * Time.deltaTime;
+            vaxis = Input.GetAxis("Vertical") * runSpeed * Time.deltaTime;
+            transform.Translate(haxis, 0, vaxis);
             stamina = Mathf.Clamp(stamina - (staminaDecrease * Time.deltaTime), 0f, maxStamina);
             slider.value = stamina;
             staminaRegen = 0f;
@@ -79,9 +92,7 @@ public class PlayerController : MonoBehaviour
         }
 
         else if (slider.value >= maxStamina)
-            slider.value = maxStamina;
-
-        
+            slider.value = maxStamina;        
     }
 
 }
