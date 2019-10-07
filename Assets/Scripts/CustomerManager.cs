@@ -6,18 +6,22 @@ using UnityEngine.AI;
 public class CustomerManager : MonoBehaviour
 {
     public Transform[] points;
+    public Transform target;
+    public float lookRadius = 5f;
+
     private int destPoint = 0;
     private NavMeshAgent agent;
+
 
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         // Disabling auto-braking allows for continuous movement
         // between points (ie, the agent doesn't slow down as it
         // approaches a destination point).
-        agent.autoBraking = false;
+//        agent.autoBraking = false;
 
         GotoNextPoint();
     }
@@ -42,7 +46,34 @@ public class CustomerManager : MonoBehaviour
     {
         // Choose the next destination point when the agent gets
         // close to the current one.
+
+        float distance = Vector3.Distance(target.position, transform.position);
+
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
             GotoNextPoint();
+
+        if (distance <= lookRadius)
+        {
+            agent.isStopped = true;
+
+            if (distance <= agent.stoppingDistance)
+                FaceTarget();
+        }
+
+        else
+            agent.isStopped = false;
+    }
+
+    void FaceTarget()
+    {
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
 }
