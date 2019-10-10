@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
     private int totalMoneyLost;
     static public bool gameIsFinished;
 
+
+    public Vector3 spawn;
     private void Awake()
     {
         delay = 11;
@@ -98,7 +100,7 @@ public class GameManager : MonoBehaviour
                 Vector3 seat = seatPositions[seats];
                 availableSeatForCustomers[seats] = false;
                 int offset = -11;
-                GameObject newCustomer = Instantiate(tmpCustomer, new Vector3(offset, 0.8f, 0.2f), Quaternion.Euler(0, 180, 0)) as GameObject;
+                GameObject newCustomer = Instantiate(tmpCustomer, new Vector3(spawn.x, spawn.y, spawn.z), Quaternion.Euler(0, 180, 0)) as GameObject;
 
                 //any post creation special Attributes?
               //  newCustomer.GetComponent<CustomerController>().mySeat = _seatIndex;
