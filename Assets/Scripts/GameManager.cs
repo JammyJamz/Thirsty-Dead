@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     public Vector3[] seatPositions;
     public GameObject nextButton;			//next button loads the next available level when player beats a level
 
-    private int delay;
+    public int delay;
     private bool canCreateNewCustomer;
 
     static public int totalMoneyMade;
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     public Vector3 spawn;
     private void Awake()
     {
-        delay = 11;
+        //delay = 11;
         canCreateNewCustomer = false;
 
         for (int i = 0; i < availableSeatForCustomers.Length; i++)
@@ -99,7 +99,6 @@ public class GameManager : MonoBehaviour
                 int seats = freeSeatIndex[Random.Range(0, freeSeatIndex.Count)];
                 Vector3 seat = seatPositions[seats];
                 availableSeatForCustomers[seats] = false;
-                int offset = -11;
                 GameObject newCustomer = Instantiate(tmpCustomer, new Vector3(spawn.x, spawn.y, spawn.z), Quaternion.Euler(0, 180, 0)) as GameObject;
 
                 //any post creation special Attributes?

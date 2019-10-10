@@ -10,7 +10,7 @@ public class ItemPickup : MonoBehaviour
     {
         GetComponent<BoxCollider>().enabled = false;
         GetComponent<Rigidbody>().useGravity = false;
-     //   GetComponent<Rigidbody>().freezeRotation = true;
+        GetComponent<Rigidbody>().freezeRotation = true;
         this.transform.position = dest.position;
         this.transform.parent = GameObject.Find("Destination").transform;
     }
@@ -21,5 +21,11 @@ public class ItemPickup : MonoBehaviour
         GetComponent<Rigidbody>().freezeRotation = false;
         GetComponent<Rigidbody>().useGravity = true;
         GetComponent<BoxCollider>().enabled = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("customer"))
+            Destroy(this.gameObject);
     }
 }

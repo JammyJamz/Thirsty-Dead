@@ -79,6 +79,7 @@ public class DialogueSystem : MonoBehaviour
                     {
                         dialogueEnd = true;
                         Instantiate(pickup, new Vector3(pickupLocation.x, pickupLocation.y, pickupLocation.z), Quaternion.identity);
+                        
                     }
                        
                 }
