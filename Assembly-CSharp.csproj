@@ -616,7 +616,6 @@
     <Compile Include="Assets\FungusExamples\FirstPerson\Scripts\SimpleMouseLook.cs" />
     <Compile Include="Assets\FungusExamples\FungusLua\Bindings\CustomScript.cs" />
     <Compile Include="Assets\FungusExamples\MonoBehEvents\SpriteColorChangeFromFungusMouseEvent.cs" />
-    <Compile Include="Assets\PauseMenu.cs" />
     <Compile Include="Assets\RestaurantKit\Scripts\Career\CareerLevelSetup.cs" />
     <Compile Include="Assets\RestaurantKit\Scripts\Career\CareerMapManager.cs" />
     <Compile Include="Assets\RestaurantKit\Scripts\Customers\CustomerController.cs" />
@@ -651,6 +650,7 @@
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\Paths.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <None Include="Assets\Fungus\Thirdparty\ThirdPartyNotices.txt" />
     <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />

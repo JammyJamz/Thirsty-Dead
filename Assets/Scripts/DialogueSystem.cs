@@ -6,6 +6,9 @@ public class DialogueSystem : MonoBehaviour
 {
     public Text nameText;
     public Text dialogueText;
+    public Text money;
+
+    public int amountOfMoney;
 
     public Vector3 pickupLocation;
     public Transform pickup;
@@ -29,6 +32,8 @@ public class DialogueSystem : MonoBehaviour
     void Start()
     {
         dialogueText.text = "";
+        amountOfMoney = 0;
+        money.text = amountOfMoney.ToString();
     }
 
     // Update is called once per frame

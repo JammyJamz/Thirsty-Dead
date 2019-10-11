@@ -26,6 +26,15 @@ public class ItemPickup : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("customer"))
+        {
             Destroy(this.gameObject);
+            FindObjectOfType<DialogueSystem>().amountOfMoney += 100;
+
+            FindObjectOfType<DialogueSystem>().money.text = FindObjectOfType<DialogueSystem>().amountOfMoney.ToString();
+        }
+
+        
+
+        
     }
 }
