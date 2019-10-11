@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -68,6 +69,10 @@ public class GameManager : MonoBehaviour
        
         uiText.text = remainingTime;
 
+        if (gameTime <= 0)
+        {
+            SceneManager.LoadSceneAsync("Gameover");
+        }
 
         if (Input.GetKeyDown(KeyCode.Keypad1))
         {
