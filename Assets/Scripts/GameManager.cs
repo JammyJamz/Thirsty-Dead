@@ -8,12 +8,15 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public Text uiText;
-    public float availableTime;
+    public Text money;
+
+    public int amountOfMoney;
 
     public Camera fpsCam;
     public Camera overheadCam;
     public Camera thirdPersonCam;
 
+    public float availableTime;
     private float seconds;
     private float minutes;
     private float gameTime;
@@ -27,6 +30,7 @@ public class GameManager : MonoBehaviour
     public bool[] availableSeatForCustomers;
     public Vector3[] seatPositions;
     public GameObject nextButton;			//next button loads the next available level when player beats a level
+
 
     public int delay;
     private bool canCreateNewCustomer;
@@ -44,11 +48,14 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < availableSeatForCustomers.Length; i++)
             availableSeatForCustomers[i] = true;
+
     }
     private void Start()
     {
 
         ShowFPSView();
+        money.text = amountOfMoney.ToString();
+        Cursor.visible = false;
         
     }
 
@@ -90,8 +97,6 @@ public class GameManager : MonoBehaviour
             ShowThirdPerson();
         }
 
-
-
         if (canCreateNewCustomer)
         {
             freeSeatIndex = new List<int>();
@@ -113,6 +118,10 @@ public class GameManager : MonoBehaviour
 
             }
         }
+
+        
+
+
     }
     IEnumerator reactiveCustomerCreation()
     {

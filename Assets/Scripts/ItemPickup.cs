@@ -28,9 +28,9 @@ public class ItemPickup : MonoBehaviour
         if (other.gameObject.CompareTag("customer"))
         {
             Destroy(this.gameObject);
-            FindObjectOfType<DialogueSystem>().amountOfMoney += 100;
+            FindObjectOfType<GameManager>().amountOfMoney += 100;
 
-            FindObjectOfType<DialogueSystem>().money.text = FindObjectOfType<DialogueSystem>().amountOfMoney.ToString();
+            FindObjectOfType<GameManager>().money.text = FindObjectOfType<GameManager>().amountOfMoney.ToString();
         }
 
         

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class CustomerManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class CustomerManager : MonoBehaviour
     private int destPoint = 0;
     private NavMeshAgent agent;
 
+    public GameObject spaceToChat; 
 
 
     void Start()
@@ -24,6 +26,7 @@ public class CustomerManager : MonoBehaviour
 //        agent.autoBraking = false;
 
         GotoNextPoint();
+        spaceToChat.SetActive(false);
     }
 
 
@@ -57,15 +60,20 @@ public class CustomerManager : MonoBehaviour
             agent.isStopped = true;
 
             if (distance <= agent.stoppingDistance)
+            {
+                spaceToChat.SetActive(true);
                 FaceTarget();
+
+            }
         }
 
         else
             agent.isStopped = false;
     }
 
-    void FaceTarget()
+    public void FaceTarget()
     {
+        
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
