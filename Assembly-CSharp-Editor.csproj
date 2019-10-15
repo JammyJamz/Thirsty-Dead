@@ -333,6 +333,12 @@
  <Reference Include="UnityEditor.Android.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.14f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="DoodleStudio95">
+ <HintPath>D:/Fall 2019/DIG4725C Workshop/Thirsty-Dead/Assets/Doodle Studio 95/Plugins/DoodleStudio95.dll</HintPath>
+ </Reference>
+ <Reference Include="DoodleStudio95Editor">
+ <HintPath>D:/Fall 2019/DIG4725C Workshop/Thirsty-Dead/Assets/Doodle Studio 95/Plugins/Editor/DoodleStudio95Editor.dll</HintPath>
+ </Reference>
  <Reference Include="JetBrains.Rider.Unity.Editor.Plugin.Repacked">
  <HintPath>D:/Fall 2019/DIG4725C Workshop/Thirsty-Dead/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
  </Reference>

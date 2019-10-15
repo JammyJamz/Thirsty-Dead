@@ -55,6 +55,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\cube.cs" />
+     <Compile Include="Assets\Doodle Studio 95\Examples\Assets\2D Environment\BirdCharacter.cs" />
+     <Compile Include="Assets\Doodle Studio 95\Examples\Assets\2D Environment\Worm.cs" />
+     <Compile Include="Assets\Doodle Studio 95\Examples\Assets\2D Environment\WormArea.cs" />
+     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\ChainAnimations.cs" />
+     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\RespawnOnOppositeEnd.cs" />
+     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\SimpleFollowingCamera.cs" />
+     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\SleepUntilTouched.cs" />
+     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\ThirdParty\Unity-FPS-Controller\FPS.cs" />
+     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\TriggerTransition.cs" />
+     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\WalkingCharacter.cs" />
      <Compile Include="Assets\Fungus\Scripts\Commands\Break.cs" />
      <Compile Include="Assets\Fungus\Scripts\Commands\Call.cs" />
      <Compile Include="Assets\Fungus\Scripts\Commands\CallMethod.cs" />
@@ -624,10 +635,13 @@
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\Fungus\Thirdparty\FungusLua\Thirdparty\JSON\readme.txt" />
+     <None Include="Assets\Doodle Studio 95\Assets\Shaders\Sprite-ShadowCasting.shader" />
      <None Include="Assets\FungusExamples\FungusLua\Localization\stringtable.txt" />
      <None Include="Assets\Fungus\Docs\README.txt" />
+     <None Include="Assets\Doodle Studio 95\Assets\Textures\Walter_Turncoat\LICENSE.txt" />
      <None Include="Assets\FungusExamples\FirstPerson\Visuals\Google Poly\Button\CC-BY.txt" />
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\Doodle Studio 95\Assets\Shaders\DrawPreview.shader" />
      <None Include="Assets\Fungus\Fonts\Exo2\OFL.txt" />
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\Fungus\Docs\LICENSE.txt" />
@@ -635,6 +649,7 @@
      <None Include="Assets\Fungus\Scripts\link.xml" />
      <None Include="Assets\FungusExamples\FungusLua\Narrative\Resources\Lua\junglestory.txt" />
      <None Include="Assets\FungusExamples\Attribution.txt" />
+     <None Include="Assets\Doodle Studio 95\Assets\Shaders\Standard-DoubleSided.shader" />
      <None Include="Assets\FungusExamples\FirstPerson\Visuals\Google Poly\Lock\CC-BY.txt" />
      <None Include="Assets\FungusExamples\TheFacility\Fonts\aleo\SIL Open Font License.txt" />
      <None Include="Assets\FungusExamples\Sherlock\Readme.txt" />
@@ -652,10 +667,13 @@
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Fungus\Textures\Attribution.txt" />
+     <None Include="Assets\Doodle Studio 95\Assets\Shaders\JitterTextShader.shader" />
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMPro.cginc" />
+     <None Include="Assets\Doodle Studio 95\Examples\Assets\2D Environment\Parchment_source.txt" />
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\Fungus\Thirdparty\FungusLua\Resources\Lua\inspect.txt" />
+     <None Include="Assets\Doodle Studio 95\Assets\Scripts\LICENSES.txt" />
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\Fungus\Thirdparty\FungusLua\Resources\Lua\fungus.txt" />
@@ -862,6 +880,9 @@
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.14f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="DoodleStudio95">
+ <HintPath>D:/Fall 2019/DIG4725C Workshop/Thirsty-Dead/Assets/Doodle Studio 95/Plugins/DoodleStudio95.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>D:/Fall 2019/DIG4725C Workshop/Thirsty-Dead/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
