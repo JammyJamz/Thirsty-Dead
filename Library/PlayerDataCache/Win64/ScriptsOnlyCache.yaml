@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - Fungus.EditorUtils.FlowchartWindow
     - Fungus.EditorUtils.FungusEditorResources
     Assembly-CSharp.dll:
+    - CustomerManager
     - FPSCamera
     - Fungus.Block
     - Fungus.Character
@@ -106,6 +107,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -119,7 +122,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9448}
     - Class: 114
+      Script: {instanceID: 9578}
+    - Class: 114
       Script: {instanceID: 9580}
+    - Class: 114
+      Script: {instanceID: 9590}
     - Class: 114
       Script: {instanceID: 9592}
     - Class: 114
@@ -201,48 +208,56 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10410}
     - Class: 114
-      Script: {instanceID: 10634}
+      Script: {instanceID: 10632}
     - Class: 114
-      Script: {instanceID: 10652}
+      Script: {instanceID: 10650}
     - Class: 114
-      Script: {instanceID: 10686}
+      Script: {instanceID: 10684}
     - Class: 114
-      Script: {instanceID: 10760}
+      Script: {instanceID: 10758}
     - Class: 114
-      Script: {instanceID: 10872}
+      Script: {instanceID: 10870}
     - Class: 114
-      Script: {instanceID: 10930}
+      Script: {instanceID: 10928}
     - Class: 114
-      Script: {instanceID: 10944}
+      Script: {instanceID: 10942}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 10968}
     - Class: 114
-      Script: {instanceID: 11314}
+      Script: {instanceID: 11176}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11312}
     - Class: 114
-      Script: {instanceID: 11374}
+      Script: {instanceID: 11344}
+    - Class: 114
+      Script: {instanceID: 11372}
+    - Class: 114
+      Script: {instanceID: 11494}
     - Class: 114
       Script: {instanceID: 11496}
     - Class: 114
-      Script: {instanceID: 11498}
+      Script: {instanceID: 11530}
     - Class: 114
-      Script: {instanceID: 11532}
+      Script: {instanceID: 11534}
     - Class: 114
-      Script: {instanceID: 11536}
+      Script: {instanceID: 11678}
     - Class: 114
-      Script: {instanceID: 11680}
+      Script: {instanceID: 11712}
     - Class: 114
-      Script: {instanceID: 11714}
+      Script: {instanceID: 11804}
     - Class: 114
-      Script: {instanceID: 11806}
-    - Class: 114
-      Script: {instanceID: 11818}
+      Script: {instanceID: 11816}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 195
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -255,6 +270,10 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 225
+      Script: {instanceID: 0}
+    - Class: 238
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -1609,12 +1628,6 @@ ScriptsOnlyBuild:
     className: Round
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: cube
-  - hash:
-      serializedVersion: 2
       Hash: b529d897c01f1439811c538581081a60
     assemblyName: Assembly-CSharp.dll
     namespaceName: Fungus
@@ -2498,4 +2511,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Art Prototype.unity
-  playerPath: D:/Fall 2019/DIG4725C Workshop/ArtProtoType/TechPrototype.exe
+  playerPath: D:/Fall 2019/DIG4725C Workshop/Prototype2/TechPrototype.exe
