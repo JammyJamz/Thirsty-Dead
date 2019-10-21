@@ -7,19 +7,19 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 10;
     public float runSpeed;
-    public float stamina = 100f;
-    public float maxStamina = 100f;
+ //   public float stamina = 100f;
+ //   public float maxStamina = 100f;
 
-    public Slider slider;
+//    public Slider slider;
     private Rigidbody rb;
 
     private float haxis;
     private float vaxis;
-    private float staminaRegen;
+  //  private float staminaRegen;
 
-    private float staminaDecrease = 10f;
-    private float StaminaIncrease = 5f;
-    private float staminaTimeToRegen = 1.5f;
+//    private float staminaDecrease = 10f;
+  //  private float StaminaIncrease = 5f;
+  //  private float staminaTimeToRegen = 1.5f;
 
     private bool isRunning;
     private bool isMoving = false;
@@ -29,8 +29,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         runSpeed = speed * 2;
 
-        slider.maxValue = maxStamina;
-        slider.value = maxStamina;
+   //     slider.maxValue = maxStamina;
+   //     slider.value = maxStamina;
 
        // Cursor.lockState = CursorLockMode.Locked;
     }
@@ -62,11 +62,11 @@ public class PlayerController : MonoBehaviour
         isRunning = Input.GetKey(KeyCode.LeftShift);
         if (isRunning && isMoving)
         {
-            if (stamina == 0 || slider.value <= 0 && isRunning)
-            {
-                runSpeed = 10;
-                slider.value = 0;
-            }
+         //   if (stamina == 0 || slider.value <= 0 && isRunning)
+         //   {
+         //       runSpeed = 10;
+          //      slider.value = 0;
+        //    }
 
             //run = new Vector3(haxis, 0, vaxis) * runSpeed * Time.deltaTime;
             //rb.MovePosition(transform.position + run);
@@ -74,25 +74,25 @@ public class PlayerController : MonoBehaviour
             haxis = Input.GetAxis("Horizontal") * runSpeed * Time.deltaTime;
             vaxis = Input.GetAxis("Vertical") * runSpeed * Time.deltaTime;
             transform.Translate(haxis, 0, vaxis);
-            stamina = Mathf.Clamp(stamina - (staminaDecrease * Time.deltaTime), 0f, maxStamina);
-            slider.value = stamina;
-            staminaRegen = 0f;
+           // stamina = Mathf.Clamp(stamina - (staminaDecrease * Time.deltaTime), 0f, maxStamina);
+           // slider.value = stamina;
+           // staminaRegen = 0f;
         }
 
-        else if (stamina < maxStamina)
-        {
+      //  else if (stamina < maxStamina)
+      //  {
 
-            if (staminaRegen >= staminaTimeToRegen)
-            {
-                stamina = Mathf.Clamp(stamina + (StaminaIncrease * Time.deltaTime), 0f, maxStamina);
-                slider.value = stamina;
-            }
-            else
-                staminaRegen += Time.deltaTime;
-        }
+         //   if (staminaRegen >= staminaTimeToRegen)
+        //    {
+         //       stamina = Mathf.Clamp(stamina + (StaminaIncrease * Time.deltaTime), 0f, maxStamina);
+         //       slider.value = stamina;
+       //     }
+        //    else
+           //     staminaRegen += Time.deltaTime;
+       // }
 
-        else if (slider.value >= maxStamina)
-            slider.value = maxStamina;        
+       // else if (slider.value >= maxStamina)
+         //   slider.value = maxStamina;        
     }
 
 }
